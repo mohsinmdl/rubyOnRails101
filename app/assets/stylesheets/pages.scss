@@ -1,3 +1,31 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+@font-face{
+    font-family: RobotoCondensed;
+    src: url(/assets/fonts/roboto-condensed.light.ttf);
+    font-weight: 800;
+  }
+  
+  @font-face{
+    font-family: EconomicaBold;
+    src: url(/assets/fonts/economica-bold.ttf);
+  }
+  
+  
+  body {
+    margin: 10;
+    padding: 0;
+    font-family: sans-serif;
+  
+  
+    font-family: 'RobotoCondensed';
+  }
+  
+  
+  h1,h2,h3,h4,h5{
+  font-family: 'EconomicaBold';
+  }
+  

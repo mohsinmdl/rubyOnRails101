@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Taski</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
     <%= render 'shared/nav' %>
+
+    <div class="profile">
+        <%= image_tag("logos/profile.png", width:"150px")%>
+    </div>
+
     <%= yield %>
-  </body>
+</body>
+
 </html>

@@ -135,7 +135,7 @@ root "pages#home"
 
 
 
-
+## How to Integrate Images into a Rails Application
 
 
 
