@@ -128,7 +128,10 @@ root "pages#home"
   get "*path", to:redirect('/error')
   get "blog", to: redirect("https://mohsinmdl.com/docs")
 
+***Overview of the Master Application Layout File***
 
+***How to Use View Partials***
+    <%= render 'shared/nav' %>
 
 
 
