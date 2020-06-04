@@ -5,7 +5,6 @@
 rails new taski
 ```
 
-
 ```
 rails new --help
 ```
@@ -97,4 +96,48 @@ Project.where.not(title:"Projcect 8")
 
 
 ## Introduction to Routes in Ruby on Rails
+
+
+### RESTful Routing in Rails
+
+app/controllers/projects_controller.rb
+
+## How to Create a Custom Controller in Rails
+
+
+rails g controller Pages contact about home
+
+
+## How to Create Custom Routes for Non CRUD Pages
+get 'about', to:'pages#about'
+path: app/controllers/pages_controller.rb
+
+```
+def about
+    @title = "Muhammad Mohsin Mahmood"
+end
+```
+
+## How to Set the Homepage for a Rails Application
+
+root "pages#home"
+
+
+## How to Integrate Routing Redirects in Rails
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
