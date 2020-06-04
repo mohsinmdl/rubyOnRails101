@@ -125,6 +125,12 @@ root "pages#home"
 
 ## How to Integrate Routing Redirects in Rails
 
+  get "*path", to:redirect('/error')
+  get "blog", to: redirect("https://mohsinmdl.com/docs")
+
+
+
+
 
 
 

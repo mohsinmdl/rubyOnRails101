@@ -1,8 +1,7 @@
 <h1>Home Project</h1>
-
-<%= link_to "About", about_path %>   
-<%= link_to "Contact", contact_path %> 
+ 
 
 <% @projects.each do |project| %>
 <p><strong><%= project.title%></strong> </p>
 <% end %>
+
