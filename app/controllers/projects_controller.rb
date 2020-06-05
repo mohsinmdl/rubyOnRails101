@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     # @projects = Project.all
-    @projects = Project.almost_complete
+    @projects = Project.all
   end
 
   # GET /projects/1
