@@ -137,6 +137,19 @@ root "pages#home"
 
 ## How to Integrate Images into a Rails Application
 
+        <%= image_tag("logos/profile.png", width:"150px")%>
+
+
+## Rails Controller
+Fat Models/Skinny Controllers Rule
+
+## Rails Models
+
+
+
+
+
+
 
 
 
