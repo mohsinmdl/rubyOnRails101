@@ -146,6 +146,12 @@ Fat Models/Skinny Controllers Rule
 ## Rails Models
 
 
+rails g model task title:string description:text project:references
+
+rake db:migrate
+
+
+rails g migration add_completed_to_tasks completed:boolean
 
 
 
