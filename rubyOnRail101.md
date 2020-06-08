@@ -2,7 +2,8 @@
 
 ***Creating a new Project***
 ```
-rails new taski
+rails new taski 
+rails new myapp --database=postgresql
 ```
 
 ```
@@ -29,7 +30,7 @@ rails s
 
 ***Should you Use Scaffolds or Generators***
 
-Scaffolds: add pretty much useless code also
+Scaffolds: add pretty much useless code also.
 Generators: We will use Generators.
 
 
@@ -94,6 +95,8 @@ end
 Project.where(title:"Projcect 8")
 Project.where.not(title:"Projcect 8")
 
+Project.where("LENGTH(title) > 20")
+
 
 ## Introduction to Routes in Ruby on Rails
 
@@ -110,8 +113,11 @@ rails g controller Pages contact about home
 
 ## How to Create Custom Routes for Non CRUD Pages
 get 'about', to:'pages#about'
-path: app/controllers/pages_controller.rb
 
+file_path: app/controllers/pages_controller.rb
+
+
+Defining Instance Variable to be used in views
 ```
 def about
     @title = "Muhammad Mohsin Mahmood"
@@ -134,6 +140,8 @@ root "pages#home"
     <%= render 'shared/nav' %>
 
 
+file name nav in share/ should be _nav.html.erb(Partial)
+
 
 ## How to Integrate Images into a Rails Application
 
@@ -147,16 +155,44 @@ Fat Models/Skinny Controllers Rule
 
 
 rails g model task title:string description:text project:references
-
 rake db:migrate
 
 
 rails g migration add_completed_to_tasks completed:boolean
 
+rails g migration add_stage_to_tasks stage:integer
+rake db:migrate
+
+rails g migration change_data_type_for_stage
+  def change
+    change_column :projects, :stage, :string
+    #Ex:- change_column("admin_users", "email", :string, :limit =>25)
+  end
 
 
+## Installing the Devise Gem for Authentication
+
+gem 'devise'
+
+bundle install
+
+```bash
+rails generate devise:install
+```
 
 
+rails g devise:views
+
+### Creating user Model
+
+rails g devise User
+
+rake db:migrate
+
+rake route | grep users
+
+
+## Authorization
 
 
 
