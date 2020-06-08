@@ -195,6 +195,9 @@ rake route | grep users
 ## Authorization
 
 
+gem 'cancan'
+gem 'cancancan' 
+
 
 
 

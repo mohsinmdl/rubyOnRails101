@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :movies
   devise_for :users
   # get 'pages/contact'
@@ -12,9 +14,12 @@ Rails.application.routes.draw do
 
   resources :projects
 
-  root "pages#home"
+  # root "pages#home"
+  root to: "pages#index"
 
   get "*path", to:redirect('/error')
+
+  
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

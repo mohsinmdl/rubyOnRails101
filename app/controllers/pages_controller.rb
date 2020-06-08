@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:index]
   def contact
   end
 
@@ -7,6 +8,10 @@ class PagesController < ApplicationController
   end
 
   def home
+    @projects = Project.all
+  end
+
+  def index
     @projects = Project.all
   end
 
